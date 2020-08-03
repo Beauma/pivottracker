@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddForm extends Component {
+class AddPersonForm extends Component {
 
     constructor(props) {
         super(props); 
@@ -26,7 +26,7 @@ class AddForm extends Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state);
+    //push to API
     const fetched = fetch('/add-people', {
         method: 'POST',
         headers: {
@@ -34,6 +34,13 @@ class AddForm extends Component {
           },
         body: JSON.stringify(this.state)
     }); 
+    //Clear form
+    this.setState({
+        firstName: '', 
+        lastName: '', 
+        company: '',
+        email: ''
+      });
     event.preventDefault();
   }
 
@@ -82,4 +89,4 @@ class AddForm extends Component {
   }
 }
 
-export default AddForm; 
+export default AddPersonForm; 

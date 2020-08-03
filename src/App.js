@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Welcome } from './components/Welcome';
-import AddForm from './components/AddForm';
+import AddPersonForm from './components/AddPersonForm';
+import AddController from "./components/AddController";
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
@@ -17,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Welcome name="User" time={currentTime} />
-      <AddForm />
+      <AddController />
     </div>
   );
 }
