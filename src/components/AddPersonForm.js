@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useState} from 'react';
+import '../styles/FormStyle.css';
 
 class AddPersonForm extends Component {
 
@@ -48,7 +49,7 @@ class AddPersonForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          First Name:
+          <h4>First Name:</h4>
           <input 
             name="firstName"
             type="text" 
@@ -57,7 +58,7 @@ class AddPersonForm extends Component {
         </label>
         <br />
         <label>
-          Last Name:
+          <h4>Last Name:</h4>
           <input 
             name="lastName"
             type="text" 
@@ -66,7 +67,7 @@ class AddPersonForm extends Component {
         </label>
         <br />
         <label>
-          Company:
+          <h4>Company:</h4>
           <input 
             name="company"
             type="text" 
@@ -75,7 +76,7 @@ class AddPersonForm extends Component {
         </label>
         <br />
         <label>
-          Email:
+          <h4>Email:</h4>
           <input 
             name="email"
             type="text" 
@@ -85,7 +86,6 @@ class AddPersonForm extends Component {
         <br />
         <input type="submit" value="Submit" />
       </form>
-      
     );
   }
 }

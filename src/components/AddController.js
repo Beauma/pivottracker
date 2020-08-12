@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Spring } from 'react-spring/renderprops';
+import '../styles/FormStyle.css';
 
 import AddPersonForm from './AddPersonForm'
 
@@ -7,23 +8,14 @@ class AddController extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state = { showMessage: false }
-
-        this.showMessage = this.showMessage.bind(this);
-    }
-
-    showMessage(event) {
-        this.setState({
-            showMessage: true
-        }); 
     }
 
     render() {
         return (
             <div>
-            <button onClick={this.props.toggle}>Add Person</button>
-            { this.state.showMessage && <AddPersonForm /> }
+            <button className="right" onClick={this.props.togglePerson}>Add<br />Person</button>
+            <button className="right" onClick={this.props.toggleInteraction}>Add<br />DPI</button>
+            <button className="right" onClick={this.props.toggleHypothesis}>Add<br />Notnot</button>
             </div>
         )
     }

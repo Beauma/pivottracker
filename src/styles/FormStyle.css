@@ -1,0 +1,51 @@
+input[type=submit], button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+button {
+    background-color: #fec041;
+    height: 45px;
+    width: 60px; 
+}
+
+  h4 {
+      margin: 0 0;
+      padding: 0 0;
+  }
+
+  input, textarea, select {
+    border: 1px solid black; 
+    float: right; 
+    /* background-color: #3CBC8D; */
+    color: black;
+    padding: 4px 4px;
+    /* margin: 8px 0; */
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 160px; 
+  }
+
+  input[type=text]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+  }
+
+  .right {
+    float: right;
+  }
+
+  form {
+    float: right;
+    clear: both;
+  }
+
+  label {
+      margin: 8px, 8px;
+  }
