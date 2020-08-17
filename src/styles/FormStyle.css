@@ -29,7 +29,7 @@ button {
     /* margin: 8px 0; */
     box-sizing: border-box;
     border-radius: 6px;
-    width: 160px; 
+    width: 540px; 
   }
 
   input[type=text]:focus {
