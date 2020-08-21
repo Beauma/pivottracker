@@ -7,6 +7,7 @@ import AddPersonForm from './components/AddPersonForm';
 import AddController from "./components/AddController";
 import AddInteractionForm from './components/AddInteractionForm.js';
 import AddHypothesisForm from './components/AddHypothesisForm'; 
+import DisplayInteraction from './components/DisplayInteraction'
 
 class App extends Component {
 
@@ -52,6 +53,8 @@ class App extends Component {
     return (
     <div className="App">
       <Welcome name="User" time={2} />
+
+      <DisplayInteraction />
 
       <AddController 
         togglePerson={this.togglePerson}

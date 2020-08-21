@@ -16,7 +16,11 @@ def get_current_time():
 @app.route('/get-<item>', methods=['GET'])
 def getThings(item=None):
 	collection = db[item]
-	r = Response(response = dumps(collection.find()), mimetype="application/json")
+	if (request.args.get('_id') != None):
+		args = {'_id': ObjectId(request.args.get('_id'))}
+	else:
+		args = request.args
+	r = Response(response = dumps(collection.find(args)), mimetype="application/json")
 	return r
 
 @app.route('/add-<item>', methods=['POST'])

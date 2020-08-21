@@ -1,5 +1,6 @@
 import React from 'react';
 import { Spring } from 'react-spring/renderprops'; 
+import '../styles/WelcomeStyle.css'
 
 export const Welcome = ({ name, time }) => {
     return (
@@ -15,9 +16,8 @@ export const Welcome = ({ name, time }) => {
             }}>
             {props => (
             <div style={props}>
-                <div style={welcomeStyle}>
-                <h1>Hello, {name}</h1>
-                <h3>Curent time is {time}</h3>
+                <div>
+                <h1>Pivot Tracker: {name}</h1>
                 </div>
             </div>
             )}
